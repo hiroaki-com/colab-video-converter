@@ -1,4 +1,4 @@
-# Demo GIF / MP4 Maker
+# Make Demo GIF / MP4
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
