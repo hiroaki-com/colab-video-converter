@@ -7,10 +7,7 @@
 
 [English](./README_EN.md) | 日本語
 
-
-<!-- デモ動画をここに貼る -->
-<!-- https://github.com/user-attachments/assets/xxxx -->
-
+![demo](https://github.com/user-attachments/assets/c7ecf5d8-2225-43d8-9063-f89199389e82)
 
 ### 概要
 
