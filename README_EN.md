@@ -11,7 +11,7 @@ English | [日本語](./README.md)
 
 ### Overview
 
-A Google Colab tool that converts screen recordings and other video files into GIF or MP4 optimized for GitHub and social media. Merging, quality tuning, and playback speed adjustment are all handled through a notebook UI — no command-line required.
+A Google Colab tool that converts screen recordings and other video files into GIF or MP4 optimized for GitHub and social media. Merging, quality tuning, playback speed adjustment, and targeted zoom are all handled through a notebook UI — no command-line required.
 
 Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 
@@ -21,11 +21,13 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 - Output as GIF or MP4 (H.264)
 - Preset quality profiles (GitHub README / SNS lightweight / High quality) or fully custom
 - Playback speed control (0.75x – 2.0x, custom value also supported)
+- Zoom feature (highlight specific areas in screen recording demos)
 - Save locally or to Google Drive
 
 #### Who Is This For
 
 - Developers who want to embed screen recordings directly into GitHub READMEs or social media
+- Developers who want to emphasize important UI interactions in demo videos
 - Engineers who want to produce polished demo videos without writing ffmpeg commands
 - Technical writers creating lightweight GIFs for blogs or documentation
 
@@ -45,12 +47,14 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 
 1. Open the notebook in Google Colab
 2. Run cells from top to bottom
-3. **Step ②** — Upload your video file(s) (multiple files supported)
-4. **Step ③** — Set the merge order (skipped automatically for a single file)
-5. **Step ④** — Choose output format, quality, and playback speed
-6. **Step ⑤** — Run the conversion
-7. **Step ⑥** — Preview the result
-8. **Step ⑦** — Select a save destination and download
+3. Step ② — Upload your video file(s) (multiple files supported)
+4. Step ③ — Set the merge order (skipped automatically for a single file)
+5. Step ④ — Choose output format, quality, and playback speed
+6. Step ⑤ — Run the conversion
+7. Step ⑥ — Preview the result
+8. Step ⑦ — Configure zoom settings (optional)
+9. Step ⑧ — Generate final output
+10. Step ⑨ — Select a save destination and download
 
 ---
 
@@ -92,6 +96,25 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 | 2.0× Speed | 2.0x |
 | 0.75× Speed | 0.75x |
 | Custom | 0.1x – 10.0x |
+
+---
+
+### Zoom Feature
+
+Highlight important UI interactions in your screen recording demos.
+
+#### How to Use
+
+1. Play the preview in Step ⑥ to identify timestamps where you want to zoom
+2. Check "Add zoom" in Step ⑦
+3. Click "+ Add Zoom Event" to add a zoom event
+4. Configure each event:
+   - Zoom area (select from 3×3 grid)
+   - Max zoom level (1.1x – 5.0x)
+   - Start time and duration for zoom-in / hold / zoom-out
+5. Run Step ⑧ to generate the final output
+
+> You can add multiple zoom events, but make sure they don't overlap in time.
 
 ---
 
