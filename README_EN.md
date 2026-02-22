@@ -63,7 +63,7 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 | Format | Characteristics | Best For | Not Ideal For |
 |---|---|---|---|
 | GIF | Auto-plays, loops, works in any Markdown renderer. 256 colors, larger file size | GitHub README (auto-play required), Zenn / Qiita | Size-constrained environments |
-| MP4 (H.264) | High quality, small file size, full color. Requires a media player | X / Slack / GitHub README (click-to-play) | Scenarios requiring auto-play or looping |
+| MP4 (H.264) | High quality, small file size, full color. Requires a media player. **No audio** | X / Slack / GitHub README (click-to-play) | Scenarios requiring auto-play or looping |
 
 ---
 
@@ -105,16 +105,17 @@ Highlight important UI interactions in your screen recording demos.
 
 #### How to Use
 
-1. Play the preview in Step ⑥ to identify timestamps where you want to zoom
-2. Check "Add zoom" in Step ⑦
-3. Click "+ Add Zoom Event" to add a zoom event
+1. Check "Add zoom" in Step ⑦ (the first event is added automatically)
+2. Play the embedded preview video to identify timestamps where you want to zoom
+3. Click "+ Add Zoom Event" to add additional zoom events
 4. Configure each event:
    - Zoom area (select from 3×3 grid)
    - Max zoom level (1.1x – 5.0x)
-   - Start time and duration for zoom-in / hold / zoom-out
+   - Start time: pause the video at the desired position and click "📍 Record this position as start time"
+   - Duration for zoom-in / hold / zoom-out
 5. Run Step ⑧ to generate the final output
 
-> You can add multiple zoom events, but make sure they don't overlap in time.
+> You can add multiple zoom events, but make sure they don't overlap in time. Overlapping events will be caught and reported as an error.
 
 ---
 
