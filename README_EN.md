@@ -7,7 +7,7 @@
 
 English | [日本語](./README.md)
 
-![make_demo_en](https://github.com/user-attachments/assets/4056749b-17b6-463d-b865-36d1e50f4364)
+https://github.com/user-attachments/assets/be5716ec-69ed-48f8-b48d-a61abf8dd1d3
 
 ### Overview
 
@@ -102,6 +102,8 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 ### Zoom Feature
 
 Highlight important UI interactions in your screen recording demos.
+
+https://github.com/user-attachments/assets/3a64c2e1-2534-4290-b476-a49d0dae01c0
 
 #### How to Use
 
