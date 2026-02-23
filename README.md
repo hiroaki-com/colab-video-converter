@@ -7,7 +7,7 @@
 
 [English](./README_EN.md) | 日本語
 
-![demo](https://github.com/user-attachments/assets/c7ecf5d8-2225-43d8-9063-f89199389e82)
+![demo_ja_full](https://github.com/user-attachments/assets/43463ffe-1d36-4ddb-9317-105da243d52f)
 
 ### 概要
 
@@ -102,6 +102,8 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 ### ズーム機能
 
 画面録画デモで重要な操作部分を強調できます。
+
+![zoom_update_ja](https://github.com/user-attachments/assets/d2994db3-ec6f-4b60-bcb3-2ea783090304)
 
 #### 使い方
 
