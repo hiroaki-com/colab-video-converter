@@ -54,7 +54,8 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 7. Step ⑥ — Preview the result
 8. Step ⑦ — Configure zoom settings (optional)
 9. Step ⑧ — Generate final output
-10. Step ⑨ — Select a save destination and download
+10. Step ⑨ — Select a save destination
+11. Step ⑩ — Execute save
 
 ---
 
@@ -113,8 +114,9 @@ https://github.com/user-attachments/assets/3a64c2e1-2534-4290-b476-a49d0dae01c0
 4. Configure each event:
    - Zoom area (select from 3×3 grid)
    - Max zoom level (1.1x – 5.0x)
-   - Start time: pause the video at the desired position and click "📍 Record this position as start time"
-   - Duration for zoom-in / hold / zoom-out
+   - Start time: pause the video at the desired position and click "📍 Record start"
+   - End time: pause the video at the desired position and click "🏁 Record end"
+   - Duration for zoom-in / zoom-out (hold duration is calculated automatically from start and end times)
 5. Run Step ⑧ to generate the final output
 
 > You can add multiple zoom events, but make sure they don't overlap in time. Overlapping events will be caught and reported as an error.
