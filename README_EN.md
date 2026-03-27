@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/be5716ec-69ed-48f8-b48d-a61abf8dd1d3
 
 ### Overview
 
-A Google Colab tool that converts screen recordings and other video files into GIF or MP4 optimized for GitHub and social media. Merging, quality tuning, playback speed adjustment, and targeted zoom are all handled through a notebook UI — no command-line required.
+A Google Colab tool that converts screen recordings and other video files into GIF or MP4 optimized for GitHub and social media. Merging, quality tuning, playback speed adjustment, targeted zoom, and adding BGM are all handled through a notebook UI — no command-line required.
 
 Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 
@@ -22,6 +22,7 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 - Preset quality profiles (GitHub README / SNS lightweight / High quality) or fully custom
 - Playback speed control (0.75x – 2.0x, custom value also supported)
 - Zoom feature (highlight specific areas in screen recording demos)
+- Add BGM (MP4 only, fetch from YouTube URL, trim, and adjust volume)
 - Save locally or to Google Drive
 
 #### Who Is This For
@@ -38,7 +39,7 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 #### Open in Colab
 
 ```
-https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_en.ipynb
+[https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_en.ipynb](https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_en.ipynb)
 ```
 
 > Runs on CPU runtime. No GPU required.
@@ -53,9 +54,10 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 6. Step ⑤ — Run the conversion
 7. Step ⑥ — Preview the result
 8. Step ⑦ — Configure zoom settings (optional)
-9. Step ⑧ — Generate final output
-10. Step ⑨ — Select a save destination
-11. Step ⑩ — Execute save
+9. Step ⑧ — Configure BGM settings (MP4 only, optional)
+10. Step ⑨ — Generate final output
+11. Step ⑩ — Select a save destination
+12. Step ⑪ — Execute save
 
 ---
 
@@ -64,7 +66,7 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 | Format | Characteristics | Best For | Not Ideal For |
 |---|---|---|---|
 | GIF | Auto-plays, loops, works in any Markdown renderer. 256 colors, larger file size | GitHub README (auto-play required), Zenn / Qiita | Size-constrained environments |
-| MP4 (H.264) | High quality, small file size, full color. Requires a media player. **No audio** | X / Slack / GitHub README (click-to-play) | Scenarios requiring auto-play or looping |
+| MP4 (H.264) | High quality, small file size, full color. Requires a media player. | X / Slack / GitHub README (click-to-play) | Scenarios requiring auto-play or looping |
 
 ---
 
@@ -117,9 +119,25 @@ https://github.com/user-attachments/assets/3a64c2e1-2534-4290-b476-a49d0dae01c0
    - Start time: pause the video at the desired position and click "📍 Record start"
    - End time: pause the video at the desired position and click "🏁 Record end"
    - Duration for zoom-in / zoom-out (hold duration is calculated automatically from start and end times)
-5. Run Step ⑧ to generate the final output
+5. Run Step ⑨ to generate the final output
 
 > You can add multiple zoom events, but make sure they don't overlap in time. Overlapping events will be caught and reported as an error.
+
+---
+
+### BGM Feature (MP4 output only)
+
+When exporting as MP4, you can add audio or music from YouTube as background music (BGM).
+
+#### How to Use
+
+1. Check "Add BGM" in Step ⑧.
+2. Enter a YouTube URL and click "🎵 Download".
+3. Play the downloaded audio preview and use the sliders to adjust the specific range (start/end times) and volume.
+4. Run Step ⑨ to generate the final output.
+
+> 💡 If the selected audio range is shorter than the video duration, it will loop automatically. If it is longer, it will be cut at the end of the video.<br>
+> * This feature is not available when GIF is selected. Please ensure you verify the copyright and licensing of any audio you use.
 
 ---
 
@@ -159,7 +177,7 @@ https://github.com/user-attachments/assets/3a64c2e1-2534-4290-b476-a49d0dae01c0
 ### Tech Stack
 
 - Runtime: Google Colab (Python 3.10+)
-- Conversion Engine: FFmpeg
+- Conversion Engine: FFmpeg, yt-dlp
 - UI: ipywidgets
 - Storage: Google Drive API / local download
 
@@ -172,6 +190,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 ### Credits
 
 - [FFmpeg](https://ffmpeg.org/) - Video conversion engine
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - Video/audio downloader
 - [Google Colab](https://colab.research.google.com/) - Free cloud runtime
 
 ### Support
