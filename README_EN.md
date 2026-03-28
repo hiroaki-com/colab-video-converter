@@ -129,6 +129,8 @@ https://github.com/user-attachments/assets/3a64c2e1-2534-4290-b476-a49d0dae01c0
 
 When exporting as MP4, you can add audio or music from YouTube as background music (BGM).
 
+https://github.com/user-attachments/assets/1f75efd8-aa61-4fee-bf34-6076ba6a790c
+
 #### How to Use
 
 1. Check "Add BGM" in Step ⑧.
