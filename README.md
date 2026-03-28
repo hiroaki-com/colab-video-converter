@@ -5,7 +5,7 @@
 [](https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb)
 [](https://ffmpeg.org/)
 
-[English](https://www.google.com/search?q=./README_EN.md) | 日本語
+[English](./README_EN.md) | 日本語
 
 [https://github.com/user-attachments/assets/5f886161-5999-4da8-8902-76451a3376f9](https://github.com/user-attachments/assets/5f886161-5999-4da8-8902-76451a3376f9)
 
