@@ -133,6 +133,8 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 
 MP4出力時、YouTube の動画・音楽をBGMとして追加できます。
 
+https://github.com/user-attachments/assets/1f75efd8-aa61-4fee-bf34-6076ba6a790c
+
 #### 使い方
 
 1.  ⑧ で「BGMを追加する」をチェック
