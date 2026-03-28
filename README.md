@@ -1,40 +1,42 @@
-# Make Demo GIF / MP4 
+# Make Demo GIF / MP4
 
-[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Colab](https://img.shields.io/badge/platform-Google%20Colab-orange.svg)](https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb)
-[![FFmpeg](https://img.shields.io/badge/FFmpeg-compatible-blueviolet.svg)](https://ffmpeg.org/)
+[](https://www.python.org/)
+[](https://www.google.com/search?q=LICENSE)
+[](https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb)
+[](https://ffmpeg.org/)
 
-[English](./README_EN.md) | 日本語
+[English](https://www.google.com/search?q=./README_EN.md) | 日本語
 
-
-https://github.com/user-attachments/assets/5f886161-5999-4da8-8902-76451a3376f9
-
+[https://github.com/user-attachments/assets/5f886161-5999-4da8-8902-76451a3376f9](https://github.com/user-attachments/assets/5f886161-5999-4da8-8902-76451a3376f9)
 
 ### 概要
 
 Google Colab環境で画面録画などの動画ファイルを、GitHub / SNS 向けの GIF または MP4 に変換するツールです。複数ファイルの結合・品質調整・再生速度変更・特定箇所へのズーム・BGM追加をすべてノートブック上の UI で完結できます。
 
-対応入力形式: `.mov` `.mp4` `.avi` `.mkv` `.webm`
+対応入力形式: .mov .mp4 .avi .mkv .webm
 
 #### 主な機能
 
-- 複数動画の結合（ドロップダウンで結合順を指定）
-- GIF / MP4（H.264）の選択出力
-- プリセット品質設定（GitHub README 向け・SNS 軽量・高品質）またはカスタム指定
-- 再生速度変更（0.75x 〜 2.0x、カスタム指定も可）
-- ズーム機能（画面録画デモ向けの特定箇所強調）
-- BGM追加機能（MP4出力時のみ・YouTube URLから取得してトリミング・音量調整が可能）
-- ローカルダウンロードまたは Google Drive への保存
+  - 複数動画の結合（ドロップダウンで結合順を指定）
+  - GIF / MP4（H.264）の選択出力
+  - プリセット品質設定（GitHub README 向け・SNS 軽量・高品質）またはカスタム指定
+  - 再生速度変更（0.75x 〜 2.0x、カスタム指定も可）
+  - ズーム機能（画面録画デモ向けの特定箇所強調）
+  - BGM追加機能（MP4出力時のみ）
+      - YouTube URLから取得
+      - 再生速度の変更（0.5x 〜 2.0x）
+      - 開始位置の指定と音量調整
+      - 高度なライセンス自動検知（商用楽曲やフリー素材の識別）
+  - ローカルダウンロードまたは Google Drive への保存
 
 #### 対象ユーザー
 
-- 画面録画をそのまま GitHub README や SNS に使いたい開発者
-- デモ動画で重要な操作部分を強調したい開発者
-- ffmpeg コマンドを書かずにデモ動画を手軽に仕上げたいエンジニア
-- Zenn / Qiita 向けに軽量 GIF を作りたいテクニカルライター
+  - 画面録画をそのまま GitHub README や SNS に使いたい開発者
+  - デモ動画で重要な操作部分を強調したい開発者
+  - ffmpeg コマンドを書かずにデモ動画を手軽に仕上げたいエンジニア
+  - Zenn / Qiita 向けに軽量 GIF を作りたいテクニカルライター
 
----
+-----
 
 ### クイックスタート
 
@@ -48,20 +50,20 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 
 #### 基本的な実行手順
 
-1. Google Colab でノートブックを開きます
-2. セルを上から順に実行します
-3. ② で動画ファイルをアップロードします（複数選択可）
-4. ③ で結合順を指定します（1 本の場合はスキップ）
-5. ④ で出力形式・品質・再生速度を設定します
-6. ⑤ で変換を実行します
-7. ⑥ でプレビューを確認します
-8. ⑦ でズーム設定を行います（オプション）
-9. ⑧ でBGM設定を行います（MP4出力時のみ・オプション）
+1.  Google Colab でノートブックを開きます
+2.  セルを上から順に実行します
+3.  ② で動画ファイルをアップロードします（複数選択可）
+4.  ③ で結合順を指定します（1 本の場合はスキップ）
+5.  ④ で出力形式・品質・再生速度を設定します
+6.  ⑤ で変換を実行します
+7.  ⑥ でプレビューを確認します
+8.  ⑦ でズーム設定を行います（オプション）
+9.  ⑧ でBGM設定を行います（MP4出力時のみ・オプション）
 10. ⑨ で最終出力を生成します
 11. ⑩ で保存先を選択します
 12. ⑪ で保存を実行します
 
----
+-----
 
 ### 出力形式の選び方
 
@@ -70,7 +72,7 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 | GIF | 自動再生・ループ・あらゆる Markdown で動く。256色・ファイル大 | GitHub README（自動再生必須）・Zenn / Qiita | ファイルサイズが厳しい場面 |
 | MP4 (H.264) | 高品質・小容量・フルカラー。再生にはプレイヤーが必要。 | X / Slack / GitHub README（クリック再生で可） | 自動再生・ループが必須の場面 |
 
----
+-----
 
 ### 品質設定
 
@@ -102,32 +104,30 @@ https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/
 | 0.75 倍速 | 0.75x |
 | カスタム指定 | 0.1x 〜 10.0x |
 
----
+-----
 
 ### ズーム機能
 
 画面録画デモで重要な操作部分を強調できます。
 
-
-https://github.com/user-attachments/assets/f273c631-0655-4c28-8575-5a5e21c69b8f
-
+[https://github.com/user-attachments/assets/f273c631-0655-4c28-8575-5a5e21c69b8f](https://github.com/user-attachments/assets/f273c631-0655-4c28-8575-5a5e21c69b8f)
 
 #### 使い方
 
-1. ⑦ のプレビュー動画を再生し、ズームしたいタイムスタンプを確認
-2. 「ズームを追加する」をチェック（チェック時に最初のイベントが自動追加されます）
-3. 「＋ Zoomイベント追加」で追加のズームイベントを追加
-4. 各イベントで以下を設定:
-   - ズーム領域（3x3 グリッドから選択）
-   - 最大ズーム倍率（1.1x 〜 5.0x）
-   - 開始時刻: 動画を任意の位置で停止し「📍 開始位置を記録」ボタンで反映
-   - 終了時刻: 動画を任意の位置で停止し「🏁 終了位置を記録」ボタンで反映
-   - ズームイン / ズームアウトの各時間（ホールド時間は開始・終了時刻から自動算出）
-5. ⑨ で最終出力を生成
+1.  ⑦ のプレビュー動画を再生し、ズームしたいタイムスタンプを確認
+2.  「ズームを追加する」をチェック（チェック時に最初のイベントが自動追加されます）
+3.  「＋ Zoomイベント追加」で追加のズームイベントを追加
+4.  各イベントで以下を設定:
+      - ズーム領域（3x3 グリッドから選択）
+      - 最大ズーム倍率（1.1x 〜 5.0x）
+      - 開始時刻: 動画を任意の位置で停止し「📍 開始位置を記録」ボタンで反映
+      - 終了時刻: 動画を任意の位置で停止し「🏁 終了位置を記録」ボタンで反映
+      - ズームイン / ズームアウトの各時間（ホールド時間は開始・終了時刻から自動算出）
+5.  ⑨ で最終出力を生成
 
 > 複数のズームイベントを設定できますが、時間が重ならないように注意してください。重複がある場合はエラーで通知されます。
 
----
+-----
 
 ### BGM機能（MP4出力時のみ）
 
@@ -135,15 +135,22 @@ MP4出力時、YouTube の動画・音楽をBGMとして追加できます。
 
 #### 使い方
 
-1. ⑧ で「BGMを追加する」をチェック
-2. YouTube URLを入力し「🎵 ダウンロード」をクリック
-3. 取得した音声のプレビューを再生しながら、使いたい範囲（開始・終了時刻）と音量をスライダーで調整
-4. ⑨ で最終出力を生成
+1.  ⑧ で「BGMを追加する」をチェック
+2.  YouTube URLを入力し「ダウンロード」をクリック
+3.  取得した音声のプレビューを再生しながら、以下の項目を調整
+      - 開始位置: 音声のどの地点から流し始めるか（再生しながら「📍 開始位置を記録」ボタンで反映可能）
+      - ⚡ 速度: BGM自体の再生速度（0.5x 〜 2.0x）
+      - 🔊 音量: 動画の音量とのバランス調整
+4.  ⑨ で最終出力を生成
 
-> 💡 使用する音声範囲が動画の長さより短い場合は自動でループし、長い場合は動画終了時点でカットされます。<br>
-> ※ GIF出力時は利用できません。また、楽曲の著作権やライセンスについてはご自身で十分にご確認のうえご利用ください。
+#### 特徴と注意点
 
----
+  - 自動ループ/カット: 動画の長さに対し、指定した範囲の音声（速度反映後）が短い場合は自動でループし、長い場合は動画終了時点でカットされます。
+  - ライセンス検知: ダウンロード時に動画のメタデータを解析し、商用楽曲の疑いがある場合や、フリー素材（NCS等）の可能性がある場合にバッジを表示します。
+      - 最終的な権利確認は必ずご自身で行ってください。
+  - 制限: GIF出力時は利用できません。
+
+-----
 
 ### サービス別サイズ制約（2026/02 時点）
 
@@ -157,7 +164,7 @@ MP4出力時、YouTube の動画・音楽をBGMとして追加できます。
 
 > GIF が 15 MB を超えた場合、ノートブックが自動で警告を表示し、軽量化の手順を案内します。
 
----
+-----
 
 ### アップロード上限
 
@@ -166,7 +173,7 @@ MP4出力時、YouTube の動画・音楽をBGMとして追加できます。
 | 1 ファイルあたり | 〜2 GB |
 | 複数ファイル | 2 GB × ファイル数 |
 
----
+-----
 
 ### 保存オプション
 
@@ -176,28 +183,28 @@ MP4出力時、YouTube の動画・音楽をBGMとして追加できます。
 | Google Drive に保存 | 指定パスへ自動コピー（マウント込み） |
 | 両方 | 上記を同時に実行 |
 
----
+-----
 
 ### 技術スタック
 
-- Runtime: Google Colab (Python 3.10+)
-- 変換エンジン: FFmpeg, yt-dlp
-- UI: ipywidgets
-- Storage: Google Drive API / ローカルダウンロード
+  - Runtime: Google Colab (Python 3.10+)
+  - 変換エンジン: FFmpeg, yt-dlp
+  - UI: ipywidgets
+  - Storage: Google Drive API / ローカルダウンロード
 
----
+-----
 
 ### ライセンス
 
-MIT License. 詳細は [LICENSE](LICENSE) を参照してください。
+MIT License. 詳細は [LICENSE](https://www.google.com/search?q=LICENSE) を参照してください。
 
 ### クレジット
 
-- [FFmpeg](https://ffmpeg.org/) - 動画変換エンジン
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - 動画/音声ダウンロード
-- [Google Colab](https://colab.research.google.com/) - 無料実行環境
+  - [FFmpeg](https://ffmpeg.org/) - 動画変換エンジン
+  - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - 動画/音声ダウンロード
+  - [Google Colab](https://colab.research.google.com/) - 無料実行環境
 
 ### サポート
 
-- バグ報告: [Issues](https://github.com/hiroaki-com/colab-video-converter/issues)
-- 質問・議論: [Discussions](https://github.com/hiroaki-com/colab-video-converter/discussions)
+  - バグ報告: [Issues](https://github.com/hiroaki-com/colab-video-converter/issues)
+  - 質問・議論: [Discussions](https://github.com/hiroaki-com/colab-video-converter/discussions)
