@@ -39,7 +39,7 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 #### Open in Colab
 
 ```
-https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb
+https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_en.ipynb
 ```
 
 > Runs on CPU runtime. No GPU required.
