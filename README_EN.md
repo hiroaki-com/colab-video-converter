@@ -22,7 +22,7 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 - Preset quality profiles (GitHub README / SNS lightweight / High quality) or fully custom
 - Playback speed control (0.75x – 2.0x, custom value also supported)
 - Zoom feature (highlight specific areas in screen recording demos)
-- Add BGM (MP4 only, fetch from YouTube URL, trim, and adjust volume)
+- Add BGM (MP4 only, fetch from YouTube URL, adjust start time, speed, and volume)
 - Save locally or to Google Drive
 
 #### Who Is This For
@@ -39,7 +39,7 @@ Supported input formats: `.mov` `.mp4` `.avi` `.mkv` `.webm`
 #### Open in Colab
 
 ```
-https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb
+[https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb](https://colab.research.google.com/github/hiroaki-com/colab-video-converter/blob/main/make_demo_gif_mp4_ja.ipynb)
 ```
 
 > Runs on CPU runtime. No GPU required.
@@ -132,11 +132,11 @@ When exporting as MP4, you can add audio or music from YouTube as background mus
 #### How to Use
 
 1. Check "Add BGM" in Step ⑧.
-2. Enter a YouTube URL and click "🎵 Download".
-3. Play the downloaded audio preview and use the sliders to adjust the specific range (start/end times) and volume.
+2. Enter a YouTube URL and click "Download".
+3. Play the downloaded audio preview and use the sliders to adjust the start time, playback speed, and volume.
 4. Run Step ⑨ to generate the final output.
 
-> 💡 If the selected audio range is shorter than the video duration, it will loop automatically. If it is longer, it will be cut at the end of the video.<br>
+> 💡 If the audio track reaches its end before the video finishes, it will loop automatically. Otherwise, it will be cut at the end of the video.<br>
 > * This feature is not available when GIF is selected. Please ensure you verify the copyright and licensing of any audio you use.
 
 ---
